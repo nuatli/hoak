@@ -43,7 +43,7 @@ jobs:
       working-directory: ./hoak-frontend
     
     - name: copy react to spring static resources
-      run: |
+    - run: |
         mkdir -p hoak-backend/src/main/resources/static
         cp -a frontend/build/. hoak-backend/src/main/resources/static/
         

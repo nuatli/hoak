@@ -1,0 +1,6 @@
+[submodule "hoak-frontend"]
+	path = hoak-frontend
+	url = https://github.com/nuatli/hoak-frontend.git
+[submodule "hoak-backend"]
+	path = hoak-backend
+	url = https://github.com/nuatli/hoak-backend.git

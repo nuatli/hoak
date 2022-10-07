@@ -25,15 +25,9 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Use Node.js 17.x
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3.5.0
         with:
           node-version: 17.x
-          
-      - name: Setup Java JDK
-        uses: actions/setup-java@3.5.1
-        with:
-          java-version: '8'
-          distribution: 'temurin'
           
       
       - name: npm install 
@@ -43,14 +37,4 @@ jobs:
       - name: frontend build
         run: npm run build --if-present
         working-directory: ./hoak-frontend
-
-      # Runs a set of commands using the runners shell
-      - name: Copy react to spring static resources
-        run: |
-              mkdir -p hoak-backend/src/main/resources/static
-              cp -a frontend/build/. hoak-backend/src/main/resources/static/
-          
-      - name: Builf Spring
-        run: mvn -B package --file pom.xml
-        working-directory: ./hoak-backend
 

@@ -29,6 +29,10 @@ jobs:
         with:
           node-version: 17.x
           
+      - name: echo pwd
+        run:
+          echo pwd
+          
       
       - name: npm install 
         run: |
